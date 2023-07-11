@@ -1,4 +1,4 @@
-import 'package:dart_rps_game/dart_rps_game.dart';
+import 'package:dart_rps_game/rps_game.dart';
 import 'package:test/test.dart';
 
 void main() {
