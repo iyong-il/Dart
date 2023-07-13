@@ -10,13 +10,13 @@ void main() {
   print(userInput);
 
   // 2. 컴퓨터가 낼 타입이 어떤것인지 결정하는 함수
-  const List<String> selecList = ['가위', '바위', '보'];
-  final cpuInput = selecList[Random().nextInt(3)];
+  const List<String> selectList = ['가위', '바위', '보'];
+  final cpuInput = selectList[Random().nextInt(3)];
 
   print(cpuInput);
   // 3. 유저의 타입과 컴퓨터 타입에 대한 결과를 계산할 함수
- final result = getResult(userInput, cpuInput);
- print(result);
+  final result = getResult(userInput, cpuInput);
+  print(result);
 }
 
 String getResult(String userInput, String cpuInput) {
