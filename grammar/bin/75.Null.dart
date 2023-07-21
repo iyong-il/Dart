@@ -15,13 +15,39 @@ void main() {
   User user = User()
     ..name = 'Ray'
     ..id = 42;
-  User? user2 = User();
+
+  User? user2;
   user2
     ?..name = 'Rodi'
     ..id = 29;
-  print(user2.name);
+  // print(user2!.name);
+
+  List<int>? list = [1, 2, 3];
+  list = null;
+  print(list?[2]);
 }
 
+//
+bool isLong(String? text) {
+  if (text == null) {
+    return false;
+  }
+  return text.length > 100;
+}
+
+class TextWidget {
+  String? text;
+
+  bool isLong() {
+    final txt = this.text;
+    if (txt == null) {
+      return false;
+    }
+    return txt.length > 100;
+  }
+}
+
+//
 class Car {
   int? totalDistance;
 
