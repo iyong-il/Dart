@@ -1,46 +1,43 @@
 void main() {
-  Student student = Student(name: 'rrrrr', grade: 'f');
-  student.methodPrint();
-  student.newGrade = 'D';
-  student.methodPrint();
-  print('------------------------------------------------');
-  Sphere sphere = Sphere(radius: 4);
-  sphere.aPrint();
-  sphere.bPrint();
-  print('------------------------------------------------');
-  sphere.newRadius = 6;
-  sphere.aPrint();
-  sphere.bPrint();
-}
-
-class Student {
-  final String _name;
-  String _grade;
-
-  Student({String name = 'Rodi', String grade = 'A'})
-      : _name = name,
-        _grade = grade;
-
-  set newGrade(String grade) {
-    _grade = grade;
+  List<String> months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+  print(months);
+  months.clear();
+  print(months);
+  months.addAll([
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ]);
+  print('1 ~ 6 : $months');
+  List<String> newMonth = [
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+  for (var i in newMonth) {
+    months.add(i);
   }
 
-  void methodPrint() {
-    print('name: $_name, grade : $_grade');
-  }
-}
-
-class Sphere {
-  static const double pi = 3.14159265359;
-  late num _radius;
-
-  Sphere({required num radius}) : _radius = radius;
-
-  set newRadius(num radius) {
-    _radius = radius;
-  }
-
-  void aPrint() => print(4 * pi * _radius * _radius);
-
-  void bPrint() => print((4 / 3) * pi * _radius * _radius);
+  print('1 ~ 12 : $months');
+  var ss = months.map((e) => e.toUpperCase()).toList();
+  print('toUpper : $ss');
 }
