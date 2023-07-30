@@ -52,4 +52,12 @@ void main() {
   } else {
     print('내복, 두껍고 긴 패딩');
   }
+
+  String isTrue1 = 'true';
+  String isTrue2 = isTrue1;
+  if (isTrue1.contains('e')) {
+    print('true');
+  } else {
+    print('false');
+  }
 }

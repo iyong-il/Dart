@@ -18,7 +18,7 @@ void main() {
   // for_in, for_each는 리스트에 주로 활용한다.
   // in 다음에는 리스트를 설정해줘야한다.
   String myName = 'Rodi is the King';
-  for (String /*var 로 설정해줄 수 있다.*/ charCode in myName.split('')) {
+  for (String /*var 로 설정해줄 수 있다.*/ charCode in myName.split(' ')) {
     print(charCode);
   }
   print('------------------------------------------');

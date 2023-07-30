@@ -25,6 +25,14 @@ void main() {
 
   User name = User(name: 'rodi', isFemale: false);
   // print(name);
+
+  // 기본생성자 - 클래스에 생성자가 없을경우
+  // Point point = Point();
+
+  // 명명 생성자
+  Point point = Point(1, 2);
+  print(point.x);
+  print(point.y);
 }
 
 // int, double, String, bool, enum - 객체들
@@ -33,7 +41,7 @@ class Tesla {
   String color;
   int batterySize; // run one kilometer, reduce one battery unit.
 
-  // constructor
+  // constructor - 생성자
   // Tesla(String selectedColor) {
   //   color = selectedColor;
   // }
@@ -55,4 +63,11 @@ class Tesla {
   void reduceBattery(int kilometer) {
     print(batterySize -= kilometer);
   }
+}
+
+class Point {
+  double? x;
+  double? y;
+
+  Point(this.x, this.y);
 }
