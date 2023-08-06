@@ -54,7 +54,7 @@ void main() {
   }
 
   String isTrue1 = 'true';
-  String isTrue2 = isTrue1;
+
   if (isTrue1.contains('e')) {
     print('true');
   } else {
