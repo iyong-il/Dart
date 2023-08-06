@@ -1,3 +1,18 @@
+enum EatChicken {
+  none,
+  phonNumberFound,
+  callingChickenShop,
+  orderChicken,
+  wait,
+  deliveredChicken,
+  prepareToEat,
+  eat
+}
+
+enum Gender { male, female }
+
+enum Season { spring, summer, fall, winter }
+
 void main() {
   EatChicken statusOfEatChicken = EatChicken.none;
 
@@ -63,18 +78,3 @@ void main() {
       print('내복, 두꺼운 긴 패딩');
   }
 }
-
-enum EatChicken {
-  none,
-  phonNumberFound,
-  callingChickenShop,
-  orderChicken,
-  wait,
-  deliveredChicken,
-  prepareToEat,
-  eat
-}
-
-enum Gender { male, female }
-
-enum Season { spring, summer, fall, winter }

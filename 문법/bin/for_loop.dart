@@ -15,6 +15,7 @@ void main() {
   }
   print(result);
   print('-----------------------------------------');
+
   // for_in, for_each는 리스트에 주로 활용한다.
   // in 다음에는 리스트를 설정해줘야한다.
   String myName = 'Rodi is the King';
@@ -22,11 +23,20 @@ void main() {
     print(charCode);
   }
   print('------------------------------------------');
+
   List<int> list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   result = 0;
+
+  for (int i in list) {
+    result += i;
+  }
+  print(result);
+
+  result = 0;
+
   list.forEach((e) {
     result += e;
   });
-  // list.forEach((e) => result += e); --> 축약형(한줄로 사용할 수 있을 때만 사용 가능하다.)
+
   print(result);
 }
