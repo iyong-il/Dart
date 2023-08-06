@@ -14,6 +14,7 @@ enum Gender { male, female }
 enum Season { spring, summer, fall, winter }
 
 void main() {
+  
   EatChicken statusOfEatChicken = EatChicken.none;
 
   switch (statusOfEatChicken) {

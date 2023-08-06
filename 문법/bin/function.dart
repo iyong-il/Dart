@@ -10,11 +10,7 @@ void main() {
   int result = 0;
   List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  int addUp2(int a) {
-    return result += a;
-  }
-
-  ;
+  int addUp2(int a) => result += a;
   numbers.forEach(addUp2);
 
   print(result);
@@ -30,7 +26,7 @@ void main() {
 
 // Optional값을 넣어줄때는 [대괄호] + ? 넣어주기 (보통 맨 뒤에 넣어준다. - 컨벤션)
 // Optional값을 설정해주지 않으면 앱이 종료될 수 있음......
-// 파라미터가 많을 경우에는 {중괄호}를 넣어주는데 이유는 파라미터를 객체화 시키는 것 같다. - 이건 그냥 느낌상 / 해당 파라미터는 키값으로 사용된다.
+// {중괄호}를 넣은 파라미터는 named parameter이다. - 순서가 중요하지않다. / Map형태로 되어있기 때문에
 // 파라미터에 기본값을 준다면 Optional값으로 하지 않아도 된다.
 String myNameInSentence(String lastName, String givenName,
     {String? middleName}) {
