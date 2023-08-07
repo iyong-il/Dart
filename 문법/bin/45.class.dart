@@ -1,73 +1,39 @@
-import '49.seperate_code.dart';
-
 void main() {
-  // 인스턴스 생성
-  Tesla myTesla = Tesla('red', 100);
-  Tesla myDuaghterTesla = Tesla('blue', 100);
-  Tesla myFirstDaughterTesla = Tesla.defaultOption();
+  Idol blackPink = Idol('블랙핑크', ['지수', '로제', '리사', '제니']);
 
-  print(myTesla);
-  print(myTesla.color);
-  myTesla.color = 'black_pink';
-  print(myTesla.color);
-  print(myDuaghterTesla.color);
-  print(myFirstDaughterTesla.color);
-  print('myFirstDaughterTesla - $myFirstDaughterTesla');
-  print('-----------------------------');
-  print(myTesla.batterySize);
-  print('--------------------------------');
-  myTesla.hornTheCar();
-  myTesla.reduceBattery(30);
-  print(myTesla);
+  blackPink.sayHello();
+  blackPink.introduce();
 
-  print('--------------------------------');
-  print('49강');
-
-  User name = User(name: 'rodi', isFemale: false);
-  // print(name);
-
-  // 기본생성자 - 클래스에 생성자가 없을경우
-  // Point point = Point();
-
-  // 명명 생성자
-  Point point = Point(1, 2);
-  print(point.x);
-  print(point.y);
+  Idol bts = Idol.fromList([
+    'BTS',
+    ['RM', '진', '슈가', '제이홉', '지민', '뷔', '정국']
+  ]);
+  bts.sayHello();
+  bts.introduce();
 }
 
-// int, double, String, bool, enum - 객체들
-
-class Tesla {
-  String color;
-  int batterySize; // run one kilometer, reduce one battery unit.
+// class는 immutable하게 만드는 것이 중요하다!
+class Idol {
+  final String name;
+  final List<String> members;
 
   // constructor - 생성자
-  // Tesla(String selectedColor) {
-  //   color = selectedColor;
-  // }
-  Tesla(this.color, [this.batterySize = 100]);
+  const Idol(this.name, this.members);
 
-// namedConstructor
-  Tesla.defaultOption() : this('white');
+  // Idol(String name, List<String> members)
+  //     : this.name = name,
+  //       this.members = members;
 
-  @override
-  String toString() {
-    // TODO: implement toString
-    return 'Tesla($color, $batterySize)';
+// named constructor
+  Idol.fromList(List values)
+      : this.name = values[0],
+        this.members = values[1];
+
+  void sayHello() {
+    print('안녕하세요, ${this.name}입니다.');
   }
 
-  void hornTheCar() {
-    print('BBBBBBBBAAAAAANG~!!!!');
+  void introduce() {
+    print('저희 멤버는 ${this.members}가 있습니다.');
   }
-
-  void reduceBattery(int kilometer) {
-    print(batterySize -= kilometer);
-  }
-}
-
-class Point {
-  double? x;
-  double? y;
-
-  Point(this.x, this.y);
 }
