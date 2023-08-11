@@ -10,6 +10,11 @@ void main() {
   ]);
   bts.sayHello();
   bts.introduce();
+  print(bts.firstMember);
+  // get
+  bts.firstMember = '김남준';
+  // set
+  print(bts.firstMember);
 }
 
 // class는 immutable하게 만드는 것이 중요하다!
@@ -36,4 +41,10 @@ class Idol {
   void introduce() {
     print('저희 멤버는 ${this.members}가 있습니다.');
   }
+
+  // getter / setter - 데이터를  가져올  때 / 설정할 때
+  // getter를 사용하는 이유 - 간단한 데이터 가공할 때 사용 (함수는 내부에 로직이 들어간다.)
+  String get firstMember => this.members[0];
+
+  set firstMember(String name) => this.members[0] = name;
 }
