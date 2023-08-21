@@ -46,7 +46,7 @@ class Car {
     return distance + thisTripDistance;
   }
 
-  Car() {}
+  Car();
 
 // factory constructor는 반드시 상위 클래스 아니면, 하위클래스를 리턴해줘야 한다.
 // 이름을 정해주지 않아도 된다.
